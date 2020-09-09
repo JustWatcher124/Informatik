@@ -20,7 +20,7 @@ while True:
     wort = [i for i in wort if i in ("E", "K")]
     for bestellung in wort:
         isitvalid = wortPruefen(switchlist[bestellung], switchlist[schongetrunken], switchlist)
-    if isitvalid != "NEIN":
+    if switchlist[isitvalid] <= 4:
         print("Bestellung wird zubereitet")
         schongetrunken = isitvalid
     else:
